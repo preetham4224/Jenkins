@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 
-                    sh '/home/jenkins/maven/mvn clean compile'
+                    sh '/home/jenkins/maven/latest/mvn clean compile'
                 }
             }
         
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
                 
-                    sh '/home/jenkins/maven/mvn test'
+                    sh '/home/jenkins/maven/latest/bin/mvn test'
                 }
             }
 
@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
         
-                    sh '/home/jenkins/maven/mvn deploy'
+                    sh '/home/jenkins/maven/latest/mvn deploy'
                 }
             }
         }
